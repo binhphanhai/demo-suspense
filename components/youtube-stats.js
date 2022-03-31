@@ -5,7 +5,7 @@ import YouTubeIcon from './icons/youtube'
 import Spinner from './spinner'
 
 // let youtubeResource = createResource(
-//   fetch('/api/youtube').then(res => res.json()),
+//   fetch('http://localhost:3000/api/youtube').then(res => res.json()),
 // )
 
 export default function YouTubeStats() {

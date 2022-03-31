@@ -5,7 +5,7 @@ import TwitterIcon from './icons/twitter'
 import Spinner from './spinner'
 
 // let twitterResource = createResource(
-//   fetch('/api/twitter').then(res => res.json()),
+//   fetch('http://localhost:3000/api/twitter').then(res => res.json()),
 // )
 
 export default function TwitterStats() {

@@ -5,7 +5,7 @@ import ChipotleIcon from './icons/chipotle'
 import Spinner from './spinner'
 
 // let chipotleResource = createResource(
-//   fetch('/api/chipotle').then(res => res.json()),
+//   fetch('http://localhost:3000/api/chipotle').then(res => res.json()),
 // )
 
 export default function YouTubeStats() {

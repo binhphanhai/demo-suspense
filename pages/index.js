@@ -1,4 +1,4 @@
-// import {Suspense} from 'react/cjs/react.production.min'
+// import {Suspense} from 'react'
 // import Spinner from '../components/spinner'
 import ChipotleStats from '../components/chipotle-stats'
 import TwitterStats from '../components/twitter-stats'

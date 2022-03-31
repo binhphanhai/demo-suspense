@@ -1,14 +1,14 @@
 import 'tailwindcss/tailwind.css'
 import Link from 'next/link'
-// import {makeServer} from '../mirage'
+import {makeServer} from '../mirage'
 
-// let isClient = typeof window !== 'undefined'
+let isClient = typeof window !== 'undefined'
 
-// if (isClient && process.env.NODE_ENV === 'development') {
-//   if (!window.server) {
-//     window.server = makeServer({environment: 'development'})
-//   }
-// }
+if (isClient && process.env.NODE_ENV === 'development') {
+  if (!window.server) {
+    window.server = makeServer({environment: 'development'})
+  }
+}
 
 export default function App({Component, pageProps}) {
   return (

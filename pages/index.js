@@ -8,7 +8,7 @@ export default function Home() {
     <div className="p-8">
       <h3 className="text-lg font-medium leading-6 text-gray-900">Dashboard</h3>
 
-      <div className="grid grid-cols-1 gap-5 mt-5 sm:grid-cols-3">
+      <div className="flex flex-wrap">
         <Suspense fallback={<div>Loading...</div>}>
           <TwitterStats />
           <YouTubeStats />

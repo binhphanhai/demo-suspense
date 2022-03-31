@@ -1,72 +1,72 @@
-import faker from "faker";
-import { createServer } from "miragejs";
+import faker from 'faker'
+import {createServer} from 'miragejs'
 
-faker.seed(5);
+faker.seed(5)
 
-export function makeServer({ environment = "test" } = {}) {
+export function makeServer({environment = 'test'} = {}) {
   let server = createServer({
     environment,
 
     timing: 750,
 
     routes() {
-      this.namespace = "api";
+      this.namespace = 'api'
 
       this.get(
-        "/twitter",
+        '/twitter',
         () => {
           return {
-            stat: "71,897",
-            change: "122",
-            changeType: "increase",
-          };
+            stat: '71,897',
+            change: '122',
+            changeType: 'increase',
+          }
         },
-        { timing: 750 }
-      );
+        {timing: 750},
+      )
 
       this.get(
-        "/youtube",
+        '/youtube',
         () => {
           return {
-            stat: "33,581",
-            change: "412",
-            changeType: "decrease",
-          };
+            stat: '33,581',
+            change: '412',
+            changeType: 'decrease',
+          }
         },
-        { timing: 1750 }
-      );
+        {timing: 1750},
+      )
 
       this.get(
-        "/chipotle",
+        '/chipotle',
         () => {
           return {
-            stat: "2,152",
-            change: "54",
-            changeType: "increase",
-          };
+            stat: '2,152',
+            change: '54',
+            changeType: 'increase',
+          }
         },
-        { timing: 1250 }
-      );
+        {timing: 1250},
+      )
 
       this.get(
-        "/instagram",
+        '/instagram',
         () => {
           return {
-            stat: "14,581",
-            change: "24",
-            changeType: "increase",
-          };
+            stat: '14,581',
+            change: '24',
+            changeType: 'increase',
+          }
         },
-        { timing: 500 }
-      );
+        {timing: 500},
+      )
 
-      this.namespace = "";
-      this.passthrough();
+      this.namespace = ''
+      this.passthrough()
     },
-  });
+  })
 
   // Don't log passthrough
-  server.pretender.passthroughRequest = () => {};
+  server.pretender.passthroughRequest = () => {}
 
-  return server;
+  return server
 }

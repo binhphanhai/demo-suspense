@@ -19,7 +19,10 @@ export default function YouTubeStats() {
   //   const data = youtubeResource.read()
 
   return (
-    <div className="flex items-center px-10 py-6 overflow-hidden bg-white rounded-lg shadow">
+    <div
+      className="flex items-center px-10 py-6  m-4 overflow-hidden bg-white rounded-lg shadow"
+      style={{minWidth: 260}}
+    >
       {data ? (
         <>
           <YouTubeIcon className="w-10 h-10 shrink-0 text-[#FF0000]" />

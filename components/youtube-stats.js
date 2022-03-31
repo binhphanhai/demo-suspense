@@ -1,27 +1,27 @@
-import {ArrowSmDownIcon, ArrowSmUpIcon} from '@heroicons/react/solid'
-import {useEffect, useState} from 'react'
+import { ArrowSmDownIcon, ArrowSmUpIcon } from "@heroicons/react/solid";
+import { useEffect, useState } from "react";
 // import {createResource} from '../utils'
-import YouTubeIcon from './icons/youtube'
-import Spinner from './spinner'
+import YouTubeIcon from "./icons/youtube";
+import Spinner from "./spinner";
 
 // let youtubeResource = createResource(
 //   fetch('http://localhost:3000/api/youtube').then(res => res.json()),
 // )
 
 export default function YouTubeStats() {
-  const [data, setDate] = useState()
+  const [data, setDate] = useState();
   useEffect(() => {
-    fetch('/api/youtube')
-      .then(response => response.json())
-      .then(res => setDate(res))
-  }, [])
+    fetch("/api/youtube")
+      .then((response) => response.json())
+      .then((res) => setDate(res));
+  }, []);
 
   //   const data = youtubeResource.read()
 
   return (
     <div
       className="flex items-center px-10 py-6  m-4 overflow-hidden bg-white rounded-lg shadow"
-      style={{minWidth: 260}}
+      style={{ width: 260 }}
     >
       {data ? (
         <>
@@ -36,12 +36,12 @@ export default function YouTubeStats() {
               </p>
               <p
                 className={`ml-2 flex items-baseline text-sm font-semibold ${
-                  data.changeType === 'increase'
-                    ? 'text-green-600'
-                    : 'text-red-600'
+                  data.changeType === "increase"
+                    ? "text-green-600"
+                    : "text-red-600"
                 }`}
               >
-                {data.changeType === 'increase' ? (
+                {data.changeType === "increase" ? (
                   <ArrowSmUpIcon className="self-center w-5 h-5 text-green-500 shrink-0" />
                 ) : (
                   <ArrowSmDownIcon className="self-center w-5 h-5 text-red-500 shrink-0" />
@@ -57,5 +57,5 @@ export default function YouTubeStats() {
         </div>
       )}
     </div>
-  )
+  );
 }

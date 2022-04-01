@@ -1,16 +1,16 @@
-import 'tailwindcss/tailwind.css'
-import Link from 'next/link'
-import {makeServer} from '../mirage'
+import "tailwindcss/tailwind.css";
+import Link from "next/link";
+import { makeServer } from "../mirage";
 
-let isClient = typeof window !== 'undefined'
+// let isClient = typeof window !== 'undefined'
 
-if (isClient && process.env.NODE_ENV === 'development') {
-  if (!window.server) {
-    window.server = makeServer({environment: 'development'})
-  }
-}
+// if (isClient && process.env.NODE_ENV === 'development') {
+//   if (!window.server) {
+//     window.server = makeServer({environment: 'development'})
+//   }
+// }
 
-export default function App({Component, pageProps}) {
+export default function App({ Component, pageProps }) {
   return (
     <div className="flex justify-center w-full min-h-screen px-20 pt-8 antialiased md:pt-28 bg-slate-100">
       <ul className="flex text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
@@ -30,5 +30,5 @@ export default function App({Component, pageProps}) {
         <Component {...pageProps} />
       </div>
     </div>
-  )
+  );
 }
